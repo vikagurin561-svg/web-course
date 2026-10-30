@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Навчальний сайт з веб-програмування (вихідна версія)</title>
+<style>
+body { margin: 0; font-family: Georgia, "Times New Roman", serif; color: #1f2933; background: #fbfaf7; line-height: 1.6; }
+.top { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; padding: .75rem 1rem; background: #0f2d24; color: #fff; }
+.logo { font-weight: 700; }
+.menu { display: flex; flex-wrap: wrap; gap: .5rem; }
+.menu-item { padding: .25rem .6rem; cursor: pointer; }
+.menu-item.active { border-bottom: 2px solid #ffd966; }
+.content { max-width: 52rem; margin: 0 auto; padding: 1rem; }
+.big-title { font-size: 2rem; font-weight: 700; margin: 1rem 0 .5rem; }
+.lead { font-size: 1.1rem; }
+.meta { color: #5b6770; }
+.section-title { font-size: 1.5rem; font-weight: 700; margin: 2rem 0 .5rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; }
+.post { padding: 1rem; background: #fff; border: 1px solid #d8d4c8; border-radius: .5rem; }
+.post-title { font-size: 1.15rem; font-weight: 700; }
+.btn { display: inline-block; padding: .5rem 1rem; color: #fff; background: #0b6e4f; border-radius: .4rem; cursor: pointer; }
+.diagram { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: 1rem 0 .25rem; }
+.box { padding: .75rem 1rem; background: #dbeafe; border: 1px solid #1d4ed8; border-radius: .5rem; }
+.caption { color: #5b6770; font-size: .95rem; }
+.note { margin-top: 1rem; padding: .75rem 1rem; background: #f1efe7; border-left: 4px solid #0b6e4f; }
+.faq-q { margin-top: .5rem; font-weight: 700; cursor: pointer; }
+.faq-a { display: none; margin-left: 1rem; }
+.faq-a.open { display: block; }
+.contact { margin: .25rem 0; }
+.footer { padding: 1rem; margin-top: 2rem; background: #f1efe7; color: #5b6770; }
+.up { display: inline-block; width: 2rem; height: 2rem; line-height: 2rem; text-align: center; background: #0b6e4f; color: #fff; border-radius: 50%; cursor: pointer; }
+</style>
+</head>
+<body>
+<div class="top" id="top">
+  <div class="logo">Гурін Вікторія · Веб-програмування</div>
+  <div class="menu">
+    <div class="menu-item active" onclick="location='#project'">Проєкт</div>
+    <div class="menu-item" onclick="location='#labs'">Лабораторні</div>
+    <div class="menu-item" onclick="location='#tech'">Технології</div>
+    <div class="menu-item" onclick="location='#about'">Про мене</div>
+    <div class="menu-item" onclick="location='#faq'">Запитання</div>
+    <div class="menu-item" onclick="location='#contacts'">Контакти</div>
+  </div>
+</div>
+
+<div class="content">
+  <div id="project">
+    <div class="big-title">Навчальний сайт з веб-програмування</div>
+    <div class="lead">Сайт, на якому зібрано результати лабораторних робіт з курсу «Веб-програмування».</div>
+    <div>Автор: Гурін Вікторія, група КІІ 61-б, факультет кібернетики.</div>
+    <div class="meta">Остання зміна: <span>31 жовтня 2026 р.</span></div>
+    <div class="btn" onclick="location='#labs'">Переглянути лабораторні</div>
+  </div>
+
+  <div id="labs">
+    <div class="section-title">Лабораторні роботи</div>
+    <div class="grid">
+      <div class="post">
+        <div class="post-title">Git і GitHub Pages</div>
+        <div class="post-text">Створення репозиторію та публікація першої сторінки на GitHub Pages.</div>
+      </div>
+      <div class="post">
+        <div class="post-title">Клієнт-серверна взаємодія</div>
+        <div class="post-text">Дослідження URL, DNS, HTTP-запитів, кешування й TLS засобами інструментів розробника.</div>
+      </div>
+      <div class="post">
+        <div class="post-title">Структура HTML-документа</div>
+        <div class="post-text">Розмітка заголовків, списків, цитат і коду; перевірка в W3C Validator.</div>
+      </div>
+      <div class="post">
+        <div class="post-title">Семантична реорганізація</div>
+        <div class="post-text">Перетворення «дів-супу» на семантичну сторінку з доступністю та структурованими даними.</div>
+      </div>
+    </div>
+    <div class="diagram">
+      <span class="box">Редактор</span><span>→</span><span class="box">GitHub</span><span>→</span><span class="box">GitHub Pages</span>
+    </div>
+    <div class="caption">Рис. 1. Шлях від коду до опублікованої сторінки.</div>
+  </div>
+
+  <div id="tech">
+    <div class="section-title">Технології</div>
+    <div>HTML5: мова розмітки та структурування вмісту</div>
+    <div>CSS3: оформлення та адаптивна верстка</div>
+    <div>Git і GitHub: контроль версій і публікація сайту</div>
+    <div>Інструменти розробника: аналіз мережі та налагодження</div>
+    <div class="note">
+      <div class="post-title">Примітка</div>
+      <div>У лабораторній № 4 сторінку переписано з семантичною розміткою.</div>
+    </div>
+  </div>
+
+  <div id="about">
+    <div class="section-title">Про мене</div>
+    <div>Мене звати Вікторія. Я студентка групи КІІ 61-б, факультет кібернетики, МЕГУ імені академіка Степана Дем'янчука.</div>
+    <div>Протягом семестру я виконую лабораторні роботи з веб-програмування: від публікації першої сторінки до семантичної розмітки та аудиту доступності.</div>
+  </div>
+
+  <div id="faq">
+    <div class="section-title">Часті запитання</div>
+    <div class="faq-q" onclick="toggle(this)">Що це за сайт?</div>
+    <div class="faq-a">Навчальний сайт з курсу «Веб-програмування», на якому зібрано результати лабораторних робіт.</div>
+    <div class="faq-q" onclick="toggle(this)">Де опубліковано сайт?</div>
+    <div class="faq-a">Сайт розміщено на GitHub Pages за адресою vikagurin561-svg.github.io/web-course.</div>
+    <div class="faq-q" onclick="toggle(this)">Чи є це комерційним проєктом?</div>
+    <div class="faq-a">Ні, це навчальний проєкт, і він не має комерційного призначення.</div>
+  </div>
+
+  <div id="contacts">
+    <div class="section-title">Контакти</div>
+    <div class="contact">Гурін Вікторія</div>
+    <div class="contact">GitHub: vikagurin561-svg</div>
+    <div class="contact">Сайт: vikagurin561-svg.github.io/web-course</div>
+    <div class="btn" onclick="copyUrl()"><span>📋</span> Скопіювати адресу сайту</div>
+  </div>
+</div>
+
+<div class="footer">
+  <div>Навчальний проєкт з курсу «Веб-програмування». Лабораторна робота № 4.</div>
+  <div>© 2026 Гурін Вікторія</div>
+  <div class="up" onclick="window.scrollTo(0, 0)">↑</div>
+</div>
+
+<script>
+function toggle(q) { q.nextElementSibling.classList.toggle('open'); }
+function copyUrl() {
+  if (navigator.clipboard) { navigator.clipboard.writeText('https://vikagurin561-svg.github.io/web-course/'); }
+}
+</script>
+</body>
+</html>
